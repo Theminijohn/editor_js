@@ -17,8 +17,10 @@ module EditorJs
       end
 
       def render(_options = {})
-        content_tag :code, class: css_name do
-          data['code']
+        content_tag :pre do
+          content_tag :code, class: css_name do
+            data['code']
+          end
         end
       end
 
